@@ -12,6 +12,11 @@ int multiplication ( int a  , int b ){
     return a * b ;
 }
 
+float division ( int a , int b ){
+    float res = 1.0 * a / b ;
+    return res ;
+}
+
 int main()
 {
     printf("Enter the operation that you want to perform \n");
@@ -47,14 +52,14 @@ int main()
         int res = multiplication(a, b);
         printf("%d  multiplied by  %d is %d\n", a, b, res);
     }
-    // else if (n == 4)
-    // {
-    //     printf("Enter the two values \n");
-    //     int a, b;
-    //     scanf("%d %d", &a, &b);
-    //     float res = division(a, b);
-    //     printf("%d divided by %d is %f\n", a, b, res);
-    // }
+    else if (n == 4)
+    {
+        printf("Enter the two values \n");
+        int a, b;
+        scanf("%d %d", &a, &b);
+        float res = division(a, b);
+        printf("%d divided by %d is %f\n", a, b, res);
+    }
     // else if (n == 5)
     // {
     //     printf("Enter the two values \n");
