@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int addition ( int a , int b ){
     return a + b ;
@@ -29,9 +30,13 @@ int power ( int a , int b ){
     return res ;
 }
 
-
 float percentage ( int a , int b ){
     float res =  1.0 * a * b / 100 ;
+    return res ;
+}
+
+float logatob( int a , int b ){
+    float res = log ( a ) / log ( b );
     return res ;
 }
 
@@ -39,10 +44,10 @@ float percentage ( int a , int b ){
 int main()
 {
     printf("Enter the operation that you want to perform \n");
-    printf("1. sum \n2. subtraction\n3. multiplication\n4. division\n5. power \n6. percentage \n7. no action required\n ");
+    printf("1. sum \n2. subtraction\n3. multiplication\n4. division\n5. power \n6. percentage\n7. log a to base b  \n8. no action required\n ");
     int n;
     scanf("%d", &n);
-    if (n < 1 || n > 7)
+    if (n < 1 || n > 8)
     {
         printf("YOUR INPUT IS WRONG \n");
         return 0;
@@ -100,7 +105,14 @@ int main()
         float res = percentage(a, b);
         printf("%d percent of %d is %f\n", b, a, res);
     }
-    else if (n == 7)
+    else if ( n == 7 ){
+        printf ("Enter two numbers a and b \n");
+        int a  ,b ; 
+        scanf ( "%d  %d " , &a , &b );
+        float res = logatob (a , b  );
+        printf ("log %d to the base %d is %d ", a , b , res );
+    }
+    else if (n == 8)
     {
         printf("THANKS \nNO action to be performed ");
         return 0;
