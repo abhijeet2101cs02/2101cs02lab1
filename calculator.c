@@ -4,6 +4,10 @@ int addition ( int a , int b ){
     return a + b ;
 }
 
+int subtraction ( int a , int b ){
+    return a - b ;
+}
+
 int main()
 {
     printf("Enter the operation that you want to perform \n");
@@ -23,14 +27,14 @@ int main()
         int res = addition(a, b);
         printf("Sum of %d and %d is %d\n", a, b, res);
     }
-    // else if (n == 2)
-    // {
-    //     printf("Enter the two values \n");
-    //     int a, b;
-    //     scanf("%d %d", &a, &b);
-    //     int res = subtraction(a, b);
-    //     printf("%d minus %d is %d\n", a, b, res);
-    // }
+    else if (n == 2)
+    {
+        printf("Enter the two values \n");
+        int a, b;
+        scanf("%d %d", &a, &b);
+        int res = subtraction(a, b);
+        printf("%d minus %d is %d\n", a, b, res);
+    }
     // else if (n == 3)
     // {
     //     printf("Enter the two values \n");
