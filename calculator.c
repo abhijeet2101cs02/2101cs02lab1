@@ -29,6 +29,13 @@ int power ( int a , int b ){
     return res ;
 }
 
+
+float percentage ( int a , int b ){
+    float res =  1.0 * a * b / 100 ;
+    return res ;
+}
+
+
 int main()
 {
     printf("Enter the operation that you want to perform \n");
@@ -85,14 +92,14 @@ int main()
         }
         printf("%d to the power %d is %d\n", a, b, res);
     }
-    // else if (n == 6)
-    // {
-    //     printf("Enter number and percentage value \n");
-    //     int a, b;
-    //     scanf("%d %d", &a, &b);
-    //     float res = percentage(a, b);
-    //     printf("%d percent of %d is %f\n", b, a, res);
-    // }
+    else if (n == 6)
+    {
+        printf("Enter number and percentage value \n");
+        int a, b;
+        scanf("%d %d", &a, &b);
+        float res = percentage(a, b);
+        printf("%d percent of %d is %f\n", b, a, res);
+    }
     else if (n == 7)
     {
         printf("THANKS \nNO action to be performed ");
