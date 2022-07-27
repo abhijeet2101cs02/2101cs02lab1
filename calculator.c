@@ -17,6 +17,18 @@ float division ( int a , int b ){
     return res ;
 }
 
+int power ( int a , int b ){
+    int res = 1 ;
+    if ( b == 0 ){
+        return 1 ;
+    }
+    for ( int  i = 0; i < b ; i++)
+    {
+        res *= a ;
+    }
+    return res ;
+}
+
 int main()
 {
     printf("Enter the operation that you want to perform \n");
@@ -60,19 +72,19 @@ int main()
         float res = division(a, b);
         printf("%d divided by %d is %f\n", a, b, res);
     }
-    // else if (n == 5)
-    // {
-    //     printf("Enter the two values \n");
-    //     int a, b;
-    //     scanf("%d %d", &a, &b);
-    //     int res = power(a, b);
-    //     if (res == -1)
-    //     {
-    //         printf("Entered value can't be calculated \n");
-    //         return 0;
-    //     }
-    //     printf("%d to the power %d is %d\n", a, b, res);
-    // }
+    else if (n == 5)
+    {
+        printf("Enter the two values \n");
+        int a, b;
+        scanf("%d %d", &a, &b);
+        int res = power(a, b);
+        if (res == -1)
+        {
+            printf("Entered value can't be calculated \n");
+            return 0;
+        }
+        printf("%d to the power %d is %d\n", a, b, res);
+    }
     // else if (n == 6)
     // {
     //     printf("Enter number and percentage value \n");
